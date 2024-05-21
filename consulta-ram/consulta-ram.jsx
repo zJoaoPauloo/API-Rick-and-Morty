@@ -1,4 +1,6 @@
+// ConsultaRAM.jsx
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function ConsultaRAM() {
   const [personagens, setPersonagens] = useState([]);
@@ -16,9 +18,11 @@ function ConsultaRAM() {
     <>
       {personagens.map((personagem, index) => (
         <div key={index}>
-          <p>{personagem.name}</p>
-          <p>Gênero: {personagem.gender}</p>
-          <img src={personagem.image} alt={personagem.name} />
+          <Link to={`/detalhe/${personagem.id}`}>
+            <p>{personagem.name}</p>
+            <p>Gênero: {personagem.gender}</p>
+            <img src={personagem.image} alt={personagem.name} />
+          </Link>
         </div>
       ))}
     </>
@@ -26,3 +30,4 @@ function ConsultaRAM() {
 }
 
 export default ConsultaRAM;
+

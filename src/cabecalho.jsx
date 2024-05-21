@@ -7,6 +7,7 @@ return(
     <Link to={'/tarefas'}>Tarefas</Link>
     <Link to={'rota2'}>rota2</Link>
     <Link to={'/consulta-ram'}> Consulta rick morty</Link>
+    <Link to={'/detalhePersonagem'}>detalhes dos personagens</Link>
     <Outlet/>
     </>
 );

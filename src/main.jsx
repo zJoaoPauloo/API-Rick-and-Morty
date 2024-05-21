@@ -6,6 +6,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Tarefas from './todolist.jsx'
 import Cabecalho from './cabecalho.jsx'
 import ConsultaRAM from '../consulta-ram/consulta-ram.jsx'
+import DetalhePersonagem from '../consulta-ram/detalhePersonagem.jsx'
 const routes = createBrowserRouter([
 {
   path:'/',
@@ -22,7 +23,13 @@ const routes = createBrowserRouter([
     {
       path:'/consulta-ram',
       element: <ConsultaRAM/>
+    },
+    {
+      path:'/detalhe/:id',
+      element: <DetalhePersonagem/>
     }
+
+    
   ]
 }
 
